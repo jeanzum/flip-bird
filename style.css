@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px #333;
+    margin: 10px 0;
+}
+
+#gameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+#gameArea {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(to bottom, #1E90FF, #000080);
+    border: 5px solid #000;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#fish {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('images/fish.png') no-repeat center/contain;
+    left: 50px;
+    top: 180px;
+    animation: swim 0.5s infinite alternate;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.obstacle {
+    position: absolute;
+    width: 50px;
+    background: green;
+    border-radius: 50%;
+    animation: move 5s infinite linear;
+}
+
+.coral {
+    background: url('images/coral.png') no-repeat center/contain;
+    bottom: 0;
+  }
+  
+  .seaweed {
+    background: url('images/seaweed.png') no-repeat center/contain;
+    top: 0;
+  }
+
+#obstacle1 {
+    height: 100px;
+    bottom: 0;
+    left: 600px;
+  }
+  
+  #obstacle2 {
+    height: 150px;
+    top: 0;
+    left: 850px;
+  }
+  
+@keyframes move {
+from {
+    left: 600px;
+}
+to {
+    left: -100px;
+}
+}
